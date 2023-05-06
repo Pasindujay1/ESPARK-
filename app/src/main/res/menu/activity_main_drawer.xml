@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_slideshow" />
+        <item
+            android:id="@+id/nav_bill_calculator"
+            android:icon="@drawable/baseline_calculate_24"
+            android:title="@string/menu_bill_calculator" />
+
+        <item
+            android:id="@+id/nav_power_calculator"
+            android:icon="@drawable/baseline_power_calc_24"
+            android:title="@string/menu_power_calculator" />
+
+        <item
+            android:id="@+id/nav_warranty_manager"
+            android:icon="@drawable/baseline_electric_meter_24"
+            android:title="@string/menu_warranty_manager" />
+        <item
+            android:id="@+id/nav_unit_converter"
+            android:icon="@drawable/baseline_electric_meter_24"
+            android:title="@string/unit_converter" />
+        <item
+            android:id="@+id/nav_bill_history"
+            android:icon="@drawable/baseline_electric_meter_24"
+            android:title="@string/bill_history" />
+    </group>
+</menu>

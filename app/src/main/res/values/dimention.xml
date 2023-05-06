@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="enter_plan_name_width">218dp</dimen>
+    <dimen name="enter_plan_name_height">43dp</dimen>
+    <dimen name="item_rv_height">200dp</dimen>
+    <dimen name="item_rv_width">356dp</dimen>
+    <dimen name="product_details_width">150dp</dimen>
+    <dimen name="ent_product_details_width">163dp</dimen>
+    <dimen name="display_amount_width">177dp</dimen>
+    <dimen name="display_amount_height">51dp</dimen>
+    <dimen name="saved_plan_height">597dp</dimen>
+    <dimen name="saved_plan_width">353dp</dimen>
+    <dimen name="view_item_name_width">150dp</dimen>
+    <dimen name="view_item_time_width">75dp</dimen>
+    <dimen name="view_item_watt_width">50dp</dimen>
+    <dimen name="add_item_plan_name_margin_left">16dp</dimen>
+    <dimen name="add_item_Enter_plan_name_margin_Top">16dp</dimen>
+    <dimen name="add_item_recycler_margin_top">32dp</dimen>
+    <dimen name="add_item_recycler_padding_left">10dp</dimen>
+    <dimen name="add_item_recycler_padding_Top">10dp</dimen>
+    <dimen name="add_item_recycler_padding_Right">10dp</dimen>
+
+
+</resources>

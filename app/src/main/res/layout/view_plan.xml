@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_Item"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/txtViewItemView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="@string/plan_Name"
+        android:textColor="@color/sixty_color" />
+
+    <TextView
+        android:id="@+id/txtViewItemWatt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="@string/plan_price"
+        android:textColor="@color/sixty_color" />
+
+    <ImageView
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+    <ImageView
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_baseline_delete_forever_24" />
+</LinearLayout>

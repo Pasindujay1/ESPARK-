@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AddItemFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sixty_color">
+
+        <TextView
+            android:id="@+id/txtView1"
+            android:layout_width="160dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="@dimen/add_item_plan_name_margin_left"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/plan_Name"
+            android:textColor="@color/thirty_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextPlanName"
+            app:layout_constraintEnd_toStartOf="@+id/editTextPlanName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editTextPlanName" />
+
+        <EditText
+            android:id="@+id/editTextPlanName"
+            android:layout_width="@dimen/enter_plan_name_width"
+            android:layout_height="@dimen/enter_plan_name_height"
+            android:layout_marginTop="35dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/Enter_plan_name"
+            android:inputType="textPersonName"
+            android:textColor="@color/thirty_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtView1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAddList"
+            android:layout_width="359dp"
+            android:layout_height="127dp"
+            android:layout_marginTop="@dimen/add_item_recycler_margin_top"
+            android:background="@drawable/recycler"
+            android:paddingLeft="@dimen/add_item_recycler_padding_left"
+            android:paddingTop="@dimen/add_item_recycler_padding_Top"
+            android:paddingRight="@dimen/add_item_recycler_padding_Right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPlanName" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="@dimen/product_details_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/product_name"
+            android:textColor="@color/thirty_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtProductName"
+            app:layout_constraintEnd_toStartOf="@+id/txtProductName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtProductName" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="@dimen/product_details_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/product_place"
+            android:textColor="@color/thirty_color"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPlaceUsing"
+            app:layout_constraintEnd_toStartOf="@+id/txtPlaceUsing"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtPlaceUsing"
+            app:layout_constraintVertical_bias="0.38" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="@dimen/product_details_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/product_watt"
+            android:textColor="@color/thirty_color"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtWatt"
+            app:layout_constraintEnd_toStartOf="@+id/txtWatt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtWatt" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="@dimen/product_details_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/product_work_time"
+            android:textColor="@color/thirty_color"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/select_hours"
+            app:layout_constraintEnd_toStartOf="@+id/select_hours"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/select_hours"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/txtProductName"
+            android:layout_width="@dimen/ent_product_details_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/product_name_eg"
+            android:inputType="textPersonName"
+            android:textColor="@color/thirty_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/rvAddList" />
+
+        <EditText
+            android:id="@+id/txtPlaceUsing"
+            android:layout_width="@dimen/ent_product_details_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/product_place_eg"
+            android:inputType="textPersonName"
+            android:textColor="@color/thirty_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+        <EditText
+            android:id="@+id/txtWatt"
+            android:layout_width="@dimen/Spinner_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/product_watt_eg"
+            android:inputType="textPersonName"
+            android:textColor="@color/thirty_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/selectWatt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/txtPlaceUsing" />
+
+        <Spinner
+            android:id="@+id/select_hours"
+            android:layout_width="@dimen/Spinner_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/Hours"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/select_minutes"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/txtWatt" />
+
+        <Spinner
+            android:id="@+id/select_minutes"
+            android:layout_width="@dimen/Spinner_width"
+            android:layout_height="wrap_content"
+            android:entries="@array/minutes"
+            app:layout_constraintBottom_toBottomOf="@+id/select_hours"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/select_hours"
+            app:layout_constraintTop_toTopOf="@+id/select_hours"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btn_add_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/thirty_color"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/btn_add"
+            android:textColor="@color/sixty_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_hours" />
+
+        <Button
+            android:id="@+id/btn_create_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/thirty_color"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/Create_Plan"
+            android:textColor="@color/ten_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_add_item" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/amount"
+            android:textColor="@color/thirty_color"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtAmount"
+            app:layout_constraintEnd_toStartOf="@+id/txtAmount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtAmount" />
+
+        <EditText
+            android:id="@+id/txtAmount"
+            android:layout_width="@dimen/display_amount_width"
+            android:layout_height="@dimen/display_amount_height"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/amount_price"
+            android:inputType="textPersonName"
+            android:text="@string/amount_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/btn_create_plan" />
+
+        <Spinner
+            android:id="@+id/selectWatt"
+            android:layout_width="@dimen/Spinner_width"
+            android:layout_height="wrap_content"
+            android:entries="@array/watt"
+            app:layout_constraintBottom_toBottomOf="@+id/txtWatt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtWatt"
+            app:layout_constraintTop_toTopOf="@+id/txtWatt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

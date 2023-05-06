@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sixty_color"
+    tools:context=".UpdatePlans">
+
+
+        <Spinner
+            android:id="@+id/select_minutes"
+            android:layout_width="@dimen/Spinner_width"
+            android:layout_height="wrap_content"
+            android:entries="@array/minutes"
+            app:layout_constraintBottom_toBottomOf="@+id/select_hours"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/select_hours"
+            app:layout_constraintTop_toTopOf="@+id/select_hours" />
+
+        <Spinner
+            android:id="@+id/select_hours"
+            android:layout_width="@dimen/Spinner_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:entries="@array/Hours"
+            app:layout_constraintEnd_toStartOf="@+id/select_minutes"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/txtWatt" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="@dimen/product_details_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/product_work_time"
+            android:textColor="@color/thirty_color"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/select_hours"
+            app:layout_constraintEnd_toStartOf="@+id/select_hours"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/select_hours" />
+
+        <EditText
+            android:id="@+id/txtWatt"
+            android:layout_width="@dimen/Spinner_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/product_watt_eg"
+            android:inputType="textPersonName"
+            android:textColor="@color/thirty_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/select_watt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/txtPlaceUsing" />
+
+        <Spinner
+            android:id="@+id/select_watt"
+            android:layout_width="@dimen/Spinner_width"
+            android:layout_height="wrap_content"
+            android:entries="@array/watt"
+            app:layout_constraintBottom_toBottomOf="@+id/txtWatt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtWatt"
+            app:layout_constraintTop_toTopOf="@+id/txtWatt" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="@dimen/product_details_width"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/product_watt"
+            android:textColor="@color/thirty_color"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtWatt"
+            app:layout_constraintEnd_toStartOf="@+id/txtWatt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtWatt" />
+
+        <TextView
+            android:id="@+id/txtView1"
+            android:layout_width="160dp"
+            android:layout_height="21dp"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/edt_plan_Name"
+            android:textColor="@color/thirty_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextPlanName"
+            app:layout_constraintEnd_toStartOf="@+id/editTextPlanName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editTextPlanName" />
+
+        <EditText
+            android:id="@+id/editTextPlanName"
+            android:layout_width="218dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/plan1"
+            android:inputType="textPersonName"
+            android:text="@string/plan1"
+            android:textColor="@color/thirty_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/txtView1"
+            tools:layout_editor_absoluteY="40dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAddList"
+            android:layout_width="356dp"
+            android:layout_height="127dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/recycler"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPlanName" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/product_name"
+            android:textColor="@color/thirty_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtProductName"
+            app:layout_constraintEnd_toStartOf="@+id/txtProductName"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtProductName" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/product_place"
+            android:textColor="@color/thirty_color"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/txtPlaceUsing"
+            app:layout_constraintEnd_toStartOf="@+id/txtPlaceUsing"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txtPlaceUsing"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <EditText
+            android:id="@+id/txtProductName"
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/bulb"
+            android:inputType="textPersonName"
+            android:text="@string/bulb"
+            android:textColor="@color/thirty_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/rvAddList" />
+
+        <EditText
+            android:id="@+id/txtPlaceUsing"
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/product_place_eg"
+            android:inputType="textPersonName"
+            android:text="@string/bedroom"
+            android:textColor="@color/thirty_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/txtProductName" />
+
+        <Button
+            android:id="@+id/btn_add_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/thirty_color"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/btn_add"
+            android:textColor="@color/sixty_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_hours" />
+
+        <Button
+            android:id="@+id/btn_save_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/thirty_color"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/Save_Plan"
+            android:textColor="@color/ten_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_add_item" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/amount"
+            android:textColor="@color/thirty_color"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/edtTxtAmount"
+            app:layout_constraintEnd_toStartOf="@+id/edtTxtAmount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edtTxtAmount" />
+
+        <EditText
+            android:id="@+id/edtTxtAmount"
+            android:layout_width="177dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/amount_price1"
+            android:inputType="textPersonName"
+            android:text="@string/amount_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/btn_save_plan" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

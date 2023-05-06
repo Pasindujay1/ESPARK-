@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row_Item"
+    android:layout_width="match_parent"
+    android:layout_height="35dp">
+
+    <TextView
+        android:id="@+id/txtViewItemView"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center|left"
+        android:text="@string/item_desc"
+        android:textColor="@color/sixty_color" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="@dimen/view_item_time_width"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center|left"
+        android:text="5 Hours"
+        android:textColor="@color/sixty_color" />
+
+    <TextView
+        android:id="@+id/textViewMinutes"
+        android:layout_width="@dimen/view_item_time_width"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center|left"
+        android:text="5 Hours"
+        android:textColor="@color/sixty_color" />
+
+    <TextView
+        android:id="@+id/txtViewItemWatt"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center|left"
+        android:text="@string/item_watt"
+        android:textColor="@color/sixty_color" />
+
+    <ImageView
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+    <ImageView
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/ic_baseline_delete_forever_24"
+        android:onClick="@{() -> viewModel.onDeleteButtonClicked(item)}"/>
+
+</LinearLayout>

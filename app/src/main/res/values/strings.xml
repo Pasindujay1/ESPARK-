@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">espark</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_bill_calculator">Bill Calculator</string>
+    <string name="menu_power_calculator">Power Calculator</string>
+    <string name="menu_warranty_manager">Warranty_Manager</string>
+    <string name="unit_converter">Unit Converter</string>
+    <string name="unit_converter_bar">Unit Converter</string>
+    <string name="bill_history">Bill History</string>
+    <string name="bill_history_bar">Bill History</string>
+
+
+    <string name="add_item">Add Item</string>
+    <string name="plans">Plans</string>
+    <string name="plan_Name">Plan Name : </string>
+    <string name="edt_plan_Name">Edit Plan Name : </string>
+    <string name="Enter_plan_name">Enter plan name</string>
+    <string name="product_name">Product Name</string>
+    <string name="product_name_eg">Eg : Bulb</string>
+    <string name="product_place">Place Using</string>
+    <string name="product_place_eg">Eg : Bedroom</string>
+    <string name="product_watt">Power Consumption</string>
+    <string name="product_watt_eg">Eg : 20</string>
+    <string name="product_work_time">Work Time Per Day</string>
+    <string name="product_work_time_eg">Eg : 6 hours</string>
+    <string name="btn_add">Add Item</string>
+    <string name="Create_Plan">Create Plan</string>
+    <string name="Save_Plan">Save Plan</string>
+    <string name="item_desc">Bulb(Bed room)</string>
+    <string name="item_watt">20W</string>
+    <string name="plan_desc">Plan 1</string>
+    <string name="plan_price">Rs :3500</string>
+    <string name="saved_plans">Saved Plans</string>
+    <string name="amount">Amount : </string>
+    <string name="amount_price">RS. 4500.00</string>
+    <string name="amount_price1">RS. 3500.00</string>
+    <string name="bulb">Bulb</string>
+    <string name="bedroom">Bedroom</string>
+    <string name="watt">20W</string>
+    <string name="plan1">Plan 1</string>
+    <string name="work_time">6 hours</string>
+    <string name="lang">Language</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="help">Help</string>
+    <string name="about_app">About app</string>
+    <string name="title_activity_update_plans">updatePlans</string>
+    <string-array name="Hours">
+        <item>H</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </string-array>
+    <string-array name="minutes">
+        <item>Min</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+
+    </string-array>
+    <string-array name="watt">
+        <item>W</item>
+        <item>KW</item>
+
+    </string-array>
+
+
+
+</resources>
