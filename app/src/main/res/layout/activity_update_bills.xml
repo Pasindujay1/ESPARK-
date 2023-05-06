@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sixty_color"
+    tools:context=".UpdateBills">
+
+    <TextView
+        android:id="@+id/updateBillTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/thirty_color"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingTop="10dp"
+        android:text="@string/add_bill_title"
+        android:textAlignment="center"
+        android:textColor="@color/ten_color"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/updateBillTV1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/bill_year"
+        android:textColor="@color/ten_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillTitle" />
+
+    <Spinner
+        android:id="@+id/updateBillSpinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/add_bill_spinner_layout_marginStart"
+        android:layout_marginTop="8dp"
+        android:entries="@array/bill_year"
+        android:minHeight="@dimen/add_bill_spinner_layout_minHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillTV1" />
+
+    <TextView
+        android:id="@+id/updateBillTV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/bill_month"
+        android:textColor="@color/ten_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillSpinner1" />
+
+    <Spinner
+        android:id="@+id/updateBillSpinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/add_bill_spinner_layout_marginStart"
+        android:layout_marginTop="8dp"
+        android:entries="@array/bill_month"
+        android:minHeight="@dimen/add_bill_spinner_layout_minHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillTV2" />
+
+    <TextView
+        android:id="@+id/updateBillTV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/start_date"
+        android:textColor="@color/ten_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillSpinner2" />
+
+    <EditText
+        android:id="@+id/updateBillStartDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="date"
+        android:minHeight="50dp"
+        android:textColorHint="@color/thirty_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillTV3" />
+
+    <TextView
+        android:id="@+id/updateBillTV4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/end_date"
+        android:textColor="@color/ten_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillStartDate" />
+
+    <EditText
+        android:id="@+id/updateBillEndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="date"
+        android:minHeight="50dp"
+        android:textColorHint="@color/thirty_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillTV4" />
+
+    <TextView
+        android:id="@+id/updateBillTV5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/bill_units"
+        android:textColor="@color/ten_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillEndDate" />
+
+    <EditText
+        android:id="@+id/updateConsumedUnits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/units_hint"
+        android:inputType="number"
+        android:minHeight="50dp"
+        android:textColorHint="@color/thirty_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillTV5" />
+
+    <TextView
+        android:id="@+id/updateBillTV6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/amount"
+        android:textColor="@color/ten_color"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateConsumedUnits" />
+
+    <EditText
+        android:id="@+id/updateBillAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/units_hint"
+        android:inputType="numberDecimal"
+        android:minHeight="50dp"
+        android:textColorHint="@color/thirty_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillTV6" />
+
+    <Button
+        android:id="@+id/updateBillAddBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/add_bill_button_layout_marginStart"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/thirty_color"
+        android:text="@string/update_bill_btn"
+        android:textColor="@color/ten_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/updateBillCancelBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillAmount" />
+
+    <Button
+        android:id="@+id/updateBillCancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/thirty_color"
+        android:text="@string/bill_cancel_btn"
+        android:textColor="@color/ten_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/updateBillAddBtn"
+        app:layout_constraintTop_toBottomOf="@+id/updateBillAmount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="main_title_layout_height">60dp</dimen>
+    <dimen name="main_title_title_padding_top">10dp</dimen>
+    <dimen name="logo_width">100dp</dimen>
+    <dimen name="logo_height">105dp</dimen>
+    <dimen name="main_txt_view_margin_start">24dp</dimen>
+    <dimen name="main_txt_view_margin_top">16dp</dimen>
+    <dimen name="add_bill_spinner_layout_marginStart">16dp</dimen>
+    <dimen name="add_bill_spinner_layout_marginTop">16dp</dimen>
+    <dimen name="add_bill_spinner_layout_minHeight">50dp</dimen>
+    <dimen name="add_bill_button_layout_marginTop">32dp</dimen>
+    <dimen name="add_bill_button_layout_marginStart">16dp</dimen>
+    <dimen name="view_bill_button_marginEnd">24dp</dimen>
+    <dimen name="view_bill_button_marginStart">24dp</dimen>
+    <dimen name="view_bill_button_marginTop">50dp</dimen>
+    <dimen name="add_bill_edtText_layout_marginStart">16dp</dimen>
+    <dimen name="add_bill_edtText_layout_marginTop">16dp</dimen>
+</resources>

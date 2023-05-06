@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">espark</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_bill_calculator">Bill Calculator</string>
+    <string name="menu_power_calculator">Power Calculator</string>
+    <string name="menu_warranty_manager">Warranty_Manager</string>
+    <string name="unit_converter">Unit Converter</string>
+    <string name="unit_converter_bar">Unit Converter</string>
+    <string name="bill_history">Bill History</string>
+    <string name="bill_history_bar">Bill History</string>
+
+    //bill calculator
+    <string name="bill_cal_title">Electricity Bill Calculator</string>
+    <string name="last_reading">Last month bill meter reading</string>
+    <string name="curr_reading">Current meter reading</string>
+    <string name="cal_btn">Calculate</string>
+    <string name="consume_type">Customer Type</string>
+    <string name="cal_hint">000000</string>
+    <string name="add_bill">Add Bill</string>
+
+    <string-array name="customer_type">
+        <item>Select Type</item>
+        <item>Domestic</item>
+        <item>Religious and charitable institutions</item>
+        <item>Industrial</item>
+    </string-array>
+
+    //adding a bill data
+    <string name="add_bill_title">Add a new Bill details</string>
+    <string name="bill_year">Billing Year</string>
+    <string name="bill_month">Billing Month</string>
+    <string name="date">dd/mm/yyyy</string>
+    <string name="bill_units">No. of units consumed :</string>
+    <string name="units_hint">0000</string>
+    <string name="amount">Bill Amount : </string>
+    <string-array name="bill_year">
+        <item>Select Year</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+    </string-array>
+
+    <string-array name="bill_month">
+        <item>Select Month</item>
+<!--        <item>01</item>-->
+<!--        <item>02</item>-->
+<!--        <item>03</item>-->
+<!--        <item>04</item>-->
+<!--        <item>05</item>-->
+<!--        <item>06</item>-->
+<!--        <item>07</item>-->
+<!--        <item>08</item>-->
+<!--        <item>09</item>-->
+<!--        <item>10</item>-->
+<!--        <item>11</item>-->
+<!--        <item>12</item>-->
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string name="start_date">From :</string>
+    <string name="end_date">To :</string>
+    <string name="bill_cancel_btn">Cancel</string>
+    <string name="past_bills">Past Bills</string>
+    <string name="add_bill_btn">Add a new Bill</string>
+    <string name="add_bill_submit">Add Bill</string>
+
+    <string name="delete_icon">Delete</string>
+    <string name="edit_icon">Edit</string>
+    <string name="bills">Bills</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update_bill_btn">Update</string>
+
+
+</resources>
