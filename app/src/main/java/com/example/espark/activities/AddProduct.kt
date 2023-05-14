@@ -24,6 +24,7 @@ import android.util.Base64
 import java.io.FileNotFoundException
 import java.io.IOException
 
+//Second Commit
 class AddProduct : AppCompatActivity() {
 
     var sImage:String? =""
