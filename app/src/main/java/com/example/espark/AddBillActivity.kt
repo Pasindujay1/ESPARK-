@@ -36,6 +36,7 @@ class AddBillActivity : AppCompatActivity() {
 
         database = FirebaseDatabase.getInstance()
 
+        //Get user input values
         yearSpinner = findViewById<Spinner>(R.id.billSpinner1)
         monthSpinner = findViewById<Spinner>(R.id.billSpinner2)
         startDateText = findViewById(R.id.billStartDate)
@@ -45,6 +46,7 @@ class AddBillActivity : AppCompatActivity() {
 
         val saveButton = findViewById<Button>(R.id.billAddBtn)
         saveButton.setOnClickListener {
+            //call function to save data
             saveDataToFirebase()
             yearSpinner.setSelection(0)
             monthSpinner.setSelection(0)
