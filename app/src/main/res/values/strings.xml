@@ -92,6 +92,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="update_bill_btn">Update</string>
+    <string name="update_bill_title">Update Bill</string>
 
 
 </resources>

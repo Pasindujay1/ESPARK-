@@ -14,7 +14,7 @@
         android:background="@color/thirty_color"
         android:fontFamily="@font/poppins_medium"
         android:paddingTop="10dp"
-        android:text="@string/add_bill_title"
+        android:text="@string/update_bill_title"
         android:textAlignment="center"
         android:textColor="@color/ten_color"
         android:textIsSelectable="false"
