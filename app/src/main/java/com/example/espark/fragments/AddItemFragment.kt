@@ -71,7 +71,9 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
             editTextPlanName.setText(planName)
         }
 
-        calcAmount()
+        var kwh = calcKiloWatt();
+
+        txtAmount.text = calcAmount(kwh).toString()
         recyclerView.adapter = adapter
         recyclerView.layoutManager =  LinearLayoutManager(requireContext())
         btn_add_item.setOnClickListener{
@@ -121,7 +123,11 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
             val addItem = AddItem(itemName , txtPlaceUsing ,watt , txtTime , txtMinutes,false)
             additems.add(addItem)
             adapter.notifyItemInserted(additems.size-1)
-            calcAmount()
+            var kwh = calcKiloWatt()
+
+
+            txtAmount.text = calcAmount(kwh).toString()
+
         }
         btn_create_plan.setOnClickListener{
 
@@ -156,8 +162,6 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
             }
         }
 
-
-
         return view
     }
     override fun onDeleteButtonClicked(position: Int) {
@@ -167,7 +171,8 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
         for (i in position until additems.size) {
             adapter.notifyItemChanged(i)
         }
-        calcAmount()
+        var kwh = calcKiloWatt()
+        txtAmount.text = calcAmount(kwh).toString()
     }
     override fun onUpdateButtonClicked(viewHolder: addItemAdapter.ViewHolder, position: Int) {
         val dialogBuilder = AlertDialog.Builder(requireContext())
@@ -199,6 +204,8 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
             item.minutes = select_minutes.selectedItem.toString()
 
             adapter.notifyItemChanged(position)
+            var kwh = calcKiloWatt();
+            txtAmount.text = calcAmount(kwh).toString()
             dialog.dismiss()
         }
         dialogBuilder.setNegativeButton("Cancel") { dialog, _ ->
@@ -207,15 +214,10 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
 
         val dialog = dialogBuilder.create()
         dialog.show()
-        calcAmount()
+
+
     }
-    fun calcAmount(){
-        var kwh :Double = 0.0;
-        for (i in 0 until additems.size) {
-            kwh += ((additems[i].watt ?: 0.0) * (additems[i].time?.toDouble() ?: 0.0)) / 1000
-
-        }
-
+    fun calcAmount(kwh :Double) : Double{
 
         var amountcal :Double = 0.0
         if(kwh <= 60){
@@ -235,8 +237,17 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
             }
         }
         amount = amountcal
-        txtAmount.text = amount.toString()
 
+        return amount
+
+    }
+
+    fun calcKiloWatt():Double{
+        var kwh :Double = 0.0;
+        for (i in 0 until additems.size) {
+            kwh += ((additems[i].watt ?: 0.0) * (additems[i].time?.toDouble() ?: 0.0)*30) / 1000
+        }
+        return kwh
     }
 
 
