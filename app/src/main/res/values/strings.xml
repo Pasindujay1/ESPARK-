@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">espark</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_bill_calculator">Bill Calculator</string>
+    <string name="menu_power_calculator">Power Calculator</string>
+    <string name="menu_warranty_manager">Warranty_Manager</string>
+    <string name="unit_converter">Unit Converter</string>
+    <string name="unit_converter_bar">Unit Converter</string>
+    <string name="bill_history">Bill History</string>
+    <string name="bill_history_bar">Bill History</string>
+
+
+    <!--Add produt page-->
+    <string name="titleAdd">Add Product</string>
+    <string name="step_1">Step 1 : Required</string>
+    <string name="step_2">Step 2 : Optional</string>
+    <string name="step_3">Step 3 : Attachments</string>
+    <string name="txt_pName">Product Name</string>
+    <string name="txt_Brand">Brand Name</string>
+    <string name="dt_purchased">Purchased Date</string>
+    <string name="wPeriod">Warranty Period</string>
+    <string name="spn_wPeriod">Select Warranty Period</string>
+    <string name="price">Price</string>
+    <string name="txt_Location">Purchased Location</string>
+    <string name="txt_phone">Phone number</string>
+    <string name="txt_email">Email Address</string>
+    <string name="txt_other">Other</string>
+    <string name="txt_image1">Upload Product Image</string>
+    <string name="txt_image2">Upload Purchased Bill</string>
+    <string name="txt_image3">Upload Warranty Copy</string>
+    <string name="btnGallery">Gallery</string>
+    <string name="btnCamera">Camera</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="btnReset">Reset</string>
+
+    <!-- dashboard page   -->
+    <string name="btnActive">Active</string>
+    <string name="btnExpiring">Expiring</string>
+    <string name="btnExpired">Expired</string>
+    <string name="btnAdd_product">Add Warranty</string>
+    <string name="dashboard_head">WELCOME..!</string>
+    <string name="brSearch">Search here..</string>
+
+    <!-- view details page-->
+    <string name="pch_date">2023.03.04</string>
+    <string name="warPeriod">1 year</string>
+    <string name="proPrice">Rs. 1500.00</string>
+    <string name="address">No. 395, APL Hardware, Gonapola</string>
+    <string name="phoneNo">0112704652</string>
+    <string name="emailEx">aplhardware14@gmail.com</string>
+    <string name="updateBtn">Update</string>
+    <string name="deleteBtn">Delete</string>
+    <string name="develop">PACH Tech</string>
+    <string name="pro_details">Product Details</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="active">Active</string>
+    <string name="expiring">Expiring</string>
+    <string name="expired">Expired</string>
+    <string name="title_activity_add_product">AddProduct</string>
+    <string name="add_product">Add Product</string>
+
+
+</resources>

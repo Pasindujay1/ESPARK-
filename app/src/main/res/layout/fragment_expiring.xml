@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addProduct"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sixty_color"
+    tools:context=".Expiring">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@color/thirty_color"
+            android:id="@+id/dashboardHead">
+
+            <TextView
+                android:id="@+id/dashboardHeadTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dashboard_head"
+                android:textColor="@color/sixty_color"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/poppins_medium"/>
+            <!--        <ImageView-->
+            <!--            android:id="@+id/btnAddItem"-->
+            <!--            android:layout_width="40dp"-->
+            <!--            android:layout_height="40dp"-->
+            <!--            android:src="@drawable/baseline_add_circle_outline_24"-->
+            <!--            android:layout_alignParentRight="true"-->
+            <!--            android:padding="5dp" />-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dashboardHead">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:background="@color/white"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/brSearch"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/poppins_regular"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/baseline_search_24"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"/>
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expiring Items"
+            android:textColor="@color/thirty_color"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="25sp"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@color/sixty_color"
+                >
+
+                <!--                <RelativeLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="20dp"-->
+                <!--                    android:layout_marginLeft="20dp"-->
+                <!--                    android:layout_marginRight="20dp"-->
+                <!--                    android:background="@color/white">-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/activeItemsResView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/item_list"/>
+                <TextView
+                    android:id="@+id/txtLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loading Data......"
+                    android:textSize="28sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"/>
+
+
+                <!--                </RelativeLayout>-->
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>
