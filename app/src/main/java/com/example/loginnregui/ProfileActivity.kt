@@ -57,7 +57,7 @@ class ProfileActivity : AppCompatActivity() {
         tvLastName = findViewById(R.id.lastnameText)
         tvEmail = findViewById(R.id.emailText)
 
-        // Initialize tvLogOut
+        // Initialize tvLogOut   and  tvupdate
         tvLogOut = findViewById(R.id.logoutButton)
         tvupdate = findViewById(R.id.update2btn)
 
