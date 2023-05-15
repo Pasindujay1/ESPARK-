@@ -92,7 +92,7 @@ class ProfileActivity : AppCompatActivity() {
                     finish()
 
                 }else{
-                    //catch error
+                    //catch error          during deletion
                     Log.e("error", it.exception.toString())
                 }
             }
