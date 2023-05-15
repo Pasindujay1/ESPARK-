@@ -61,6 +61,7 @@ class UpdateBills : AppCompatActivity() {
                 findViewById<EditText>(R.id.updateBillAmount).setText(totAmount)
 
 
+                //buttons for updates and cancel update
                 val updateButton = findViewById<Button>(R.id.updateBillAddBtn)
                 val cancelButton = findViewById<Button>(R.id.updateBillCancelBtn)
 
@@ -68,6 +69,7 @@ class UpdateBills : AppCompatActivity() {
                     updateDataToFirebase()
                 }
 
+                //backward navigation function
                 cancelButton.setOnClickListener {
                     onBackPressed()
                 }
@@ -79,6 +81,7 @@ class UpdateBills : AppCompatActivity() {
         })
     }
 
+    //function to update the database
     private fun updateDataToFirebase(){
         //get updated values
         val yearSpinner = findViewById<Spinner>(R.id.updateBillSpinner1)
