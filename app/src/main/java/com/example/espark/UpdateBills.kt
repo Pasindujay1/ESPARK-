@@ -79,6 +79,7 @@ class UpdateBills : AppCompatActivity() {
     }
 
     private fun updateDataToFirebase(){
+        //get updated values
         val yearSpinner = findViewById<Spinner>(R.id.updateBillSpinner1)
         val monthSpinner = findViewById<Spinner>(R.id.updateBillSpinner2)
         val startDateText = findViewById<EditText>(R.id.updateBillStartDate)
@@ -86,6 +87,7 @@ class UpdateBills : AppCompatActivity() {
         val unitEditText = findViewById<EditText>(R.id.updateConsumedUnits)
         val amountEditText = findViewById<EditText>(R.id.updateBillAmount)
 
+        //convert to strings
         val year = yearSpinner.selectedItem.toString()
         val month = monthSpinner.selectedItem.toString()
         val startDate = startDateText.text.toString()
@@ -95,7 +97,10 @@ class UpdateBills : AppCompatActivity() {
 
         val firebaseRef = FirebaseDatabase.getInstance().getReference("Bills").child(billId)
 
+        //add values to bill data class
         val bill = BillData(billId, year, month, startDate, endDate, consumedUnits, totAmount)
+
+        //update database
         firebaseRef.setValue(bill)
             .addOnSuccessListener {
                 Toast.makeText(this, "Data updated successfully", Toast.LENGTH_SHORT).show()

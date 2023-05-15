@@ -79,6 +79,7 @@ class AddBillActivity : AppCompatActivity() {
         val units = consumedUnits.toIntOrNull()
         var hasError = false
 
+        //some form validation methods
         if (startDate.isEmpty()) {
             startDateText.setError("Please enter a start date")
             hasError = true
