@@ -45,6 +45,8 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Initialize the binding instance
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
