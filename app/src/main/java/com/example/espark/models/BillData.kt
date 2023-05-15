@@ -4,6 +4,7 @@ import java.time.LocalDate
 import java.time.Month
 import java.time.Year
 
+//class to store bill data
 data class BillData(
     val billId : String? = null,
     val billYear: String? = null,
