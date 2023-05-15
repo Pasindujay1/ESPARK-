@@ -60,6 +60,7 @@ class addItemAdapter(
             onUpdateClickListener.onUpdateButtonClicked(holder , position)
         }
     }
+    //count items
     override fun getItemCount(): Int {//count items
         return additems.size
     }
