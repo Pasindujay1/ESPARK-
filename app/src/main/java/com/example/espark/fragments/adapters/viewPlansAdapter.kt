@@ -12,9 +12,9 @@ import com.example.espark.fragments.OnUpdatePlanClickListener
 
 
 class viewPlansAdapter(
-    var planItems :List<Plan>,
-    private val onDeleteClickListener: OnDeletePlanClickListener,
-    private val onUpdateClickListener: OnUpdatePlanClickListener,
+    var planItems :List<Plan>,// a list of Plan objects
+    private val onDeleteClickListener: OnDeletePlanClickListener,//listener for delete button click events
+    private val onUpdateClickListener: OnUpdatePlanClickListener,// a listener for update button click events
 ): RecyclerView.Adapter<viewPlansAdapter.ViewHolder>() {
 
 
@@ -42,7 +42,7 @@ class viewPlansAdapter(
         return ViewHolder(view)
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-          holder.txtViewPlanName.text = planItems[position].planName
+          holder.txtViewPlanName.text = planItems[position].planName//set plan name
           holder.txtViewPrice.text = planItems[position].amount
           val name = planItems[position].planName
           holder.btnDelete.setOnClickListener{
@@ -55,11 +55,9 @@ class viewPlansAdapter(
           }
 
 
-//        holder.txtViewPlanName.text = plansArraylist.get(position)
-//        holder.txtViewPrice.text = plansPriceArraylist.get(position)
     }
     override fun getItemCount(): Int {
-//        return plansArraylist.size
+
         return planItems.size
     }
 }
