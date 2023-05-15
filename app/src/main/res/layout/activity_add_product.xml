@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.AddProduct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/thirty_color">
+
+<!--        <ImageView-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:src="@drawable/baseline_keyboard_backspace_24"-->
+<!--            android:layout_centerVertical="true"/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_product"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="@color/ten_color"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_regular" />
+
+
+
+    </RelativeLayout>
+
+
+
+    <ScrollView
+        android:id="@+id/scrlAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--            android:id="@+id/required_detais"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginTop="8dp"-->
+            <!--            android:visibility="visible"-->
+            <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--            app:layout_constraintTop_toTopOf="parent"-->
+            <!--            app:layout_constraintVertical_bias="0.0"-->
+            <!--            tools:layout_editor_absoluteX="16dp">-->
+
+
+            <TextView
+                android:id="@+id/txtStep1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/step_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/poppins_regular" />
+
+            <!--                <EditText-->
+            <!--                    android:id="@+id/edtProduct"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:layout_marginTop="50dp"-->
+            <!--                    android:ems="10"-->
+            <!--                    android:inputType="text"-->
+            <!--                    android:hint="Enter Product Name"-->
+
+            <!--                    />-->
+            <!--                <EditText-->
+            <!--                    android:id="@+id/edtBrand"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:layout_marginTop="50dp"-->
+            <!--                    android:ems="10"-->
+            <!--                    android:inputType="text"-->
+            <!--                    android:hint="Enter Brand Name"-->
+            <!--                    />-->
+            <!--                <EditText-->
+            <!--                    android:id="@+id/edtPurchasedDate"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:layout_marginTop="50dp"-->
+            <!--                    android:ems="10"-->
+            <!--                    android:inputType="date"-->
+            <!--                    android:hint="Enter Purchased Date"-->
+            <!--                    />-->
+            <!--                <EditText-->
+            <!--                    android:id="@+id/edtWarrantyPeriod"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:layout_marginTop="50dp"-->
+            <!--                    android:ems="10"-->
+            <!--                    android:inputType="number"-->
+            <!--                    android:hint="Enter Warranty Period(years)"-->
+            <!--                    />-->
+            <!--                <EditText-->
+            <!--                    android:id="@+id/edtPrice"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="50dp"-->
+            <!--                    android:layout_marginTop="50dp"-->
+            <!--                    android:ems="10"-->
+            <!--                    android:inputType="numberDecimal"-->
+            <!--                    android:hint="Enter Price"-->
+            <!--                    />-->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtProduct"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/txt_pName"
+                android:textColorHint="?android:attr/textColorPrimary"
+                app:boxStrokeColor="?attr/colorControlNormal"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="?attr/colorControlNormal"
+                app:hintTextColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtStep1"
+                app:startIconTint="?attr/colorControlNormal"
+                android:fontFamily="@font/poppins_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtBrand"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/txt_Brand"
+                android:textColorHint="?android:attr/textColorPrimary"
+                app:boxStrokeColor="?attr/colorControlNormal"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="?attr/colorControlNormal"
+                app:hintTextColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtPrduct"
+                app:startIconTint="?attr/colorControlNormal"
+                android:fontFamily="@font/poppins_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtPurchasedDate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/dt_purchased"
+                android:textColorHint="?android:attr/textColorPrimary"
+                app:boxStrokeColor="?attr/colorControlNormal"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="?attr/colorControlNormal"
+                app:hintTextColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtBrand"
+                app:startIconTint="?attr/colorControlNormal"
+                android:fontFamily="@font/poppins_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPurchasedDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtWarrantyPeriod"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/wPeriod"
+                android:textColorHint="?android:attr/textColorPrimary"
+                app:boxStrokeColor="?attr/colorControlNormal"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="?attr/colorControlNormal"
+                app:hintTextColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtPurchsedDate"
+                app:startIconTint="?attr/colorControlNormal"
+                android:fontFamily="@font/poppins_regular">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtWarrantyPeriod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtPrice"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/price"
+                android:textColorHint="?android:attr/textColorPrimary"
+                app:boxStrokeColor="?attr/colorControlNormal"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="?attr/colorControlNormal"
+                app:hintTextColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtWarrantyPeriod"
+                app:startIconTint="?attr/colorControlNormal"
+                android:fontFamily="@font/poppins_regular">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtStep2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:text="@string/step_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtPrice"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtLocation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/txt_Location"
+                android:textColorHint="?android:attr/textColorPrimary"
+                app:boxStrokeColor="?attr/colorControlNormal"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="?attr/colorControlNormal"
+                app:hintTextColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtStep2"
+                app:startIconTint="?attr/colorControlNormal"
+                android:fontFamily="@font/poppins_regular">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtPhone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/txt_phone"
+                android:textColorHint="?android:attr/textColorPrimary"
+                app:boxStrokeColor="?attr/colorControlNormal"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="?attr/colorControlNormal"
+                app:hintTextColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtLocation"
+                app:startIconTint="?attr/colorControlNormal"
+                android:fontFamily="@font/poppins_regular">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/txt_email"
+                android:textColorHint="?android:attr/textColorPrimary"
+                app:boxStrokeColor="?attr/colorControlNormal"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="?attr/colorControlNormal"
+                app:hintTextColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtPhone"
+                app:startIconTint="?attr/colorControlNormal"
+                android:fontFamily="@font/poppins_regular">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtOther"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/txt_other"
+                android:textColorHint="?android:attr/textColorPrimary"
+                app:boxStrokeColor="?attr/colorControlNormal"
+                app:boxStrokeWidthFocused="2dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="?attr/colorControlNormal"
+                app:hintTextColor="?android:attr/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+                app:startIconTint="?attr/colorControlNormal"
+                android:fontFamily="@font/poppins_regular">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtStep3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:text="@string/step_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtOther" />
+
+            <TextView
+                android:id="@+id/txt_image1"
+                android:layout_width="161dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="272dp"
+                android:layout_weight="1"
+                android:text="@string/txt_image1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtStep3"
+                android:fontFamily="@font/poppins_regular"/>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_product"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_image1"
+                    app:srcCompat="@drawable/baseline_add_a_photo_24" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+<!--                    <Button-->
+<!--                        android:id="@+id/btnCamera"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="@string/btnCamera"-->
+<!--                        android:backgroundTint="@color/ten_color"-->
+<!--                        android:fontFamily="@font/poppins_regular"/>-->
+
+                    <Button
+                        android:id="@+id/btnGallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnGallery"
+                        android:backgroundTint="@color/ten_color"
+                        android:fontFamily="@font/poppins_regular"
+                        android:onClick="insert_Image"/>
+<!--                        android:layout_below="@id/btnCamera"-->
+
+
+                </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+
+            <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btnSubmit"
+                android:backgroundTint="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/ten_color"/>
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btnReset"
+                android:backgroundTint="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/ten_color"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
