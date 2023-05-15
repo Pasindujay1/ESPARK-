@@ -50,6 +50,7 @@ class ProfileActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Initialize TextView instances with the corresponding ids from the layout
 
 
         tvFirstName = findViewById(R.id.firstnameText)
