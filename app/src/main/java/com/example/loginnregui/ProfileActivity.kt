@@ -101,7 +101,9 @@ class ProfileActivity : AppCompatActivity() {
 
 
 
-        private fun loadProfile(){
+    // Function to load the user profile information
+
+    private fun loadProfile(){
             val user = firebaseAuth.currentUser
             val userreference = databaseReference?.child(user?.uid!!)
 
