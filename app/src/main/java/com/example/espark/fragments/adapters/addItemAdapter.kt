@@ -24,12 +24,12 @@ class addItemAdapter(
         val txtViewItemView:TextView
         val txtViewItemWatt:TextView
         val textViewTime:TextView
-        val textViewMinutes:TextView
+        val textViewMinutes:TextView//declare textview
         val btnDelete:ImageView
-        val btnUpdate:ImageView
+        val btnUpdate:ImageView//declare textview
 
 
-        init {
+        init {//intialize
             txtViewItemView = view.findViewById(R.id.txtViewItemView)
             txtViewItemWatt = view.findViewById(R.id.txtViewItemWatt)
             textViewTime = view.findViewById(R.id.textViewTime)
@@ -51,7 +51,7 @@ class addItemAdapter(
         holder.txtViewItemView.text = addItem
         holder.txtViewItemWatt.text = additems[position].watt?.toInt().toString()+"W"
         holder.textViewTime.text = additems[position].time + "h"
-        holder.textViewMinutes.text = additems[position].minutes + "m"
+        holder.textViewMinutes.text = additems[position].minutes + "m"//set values to views
         holder.btnDelete.setOnClickListener{
             onDeleteClickListener.onDeleteButtonClicked(position)
         }

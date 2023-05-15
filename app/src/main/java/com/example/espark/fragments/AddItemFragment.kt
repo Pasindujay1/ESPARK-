@@ -178,6 +178,7 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
         var kwh = calcKiloWatt()
         txtAmount.text = calcAmount(kwh).toString()
     }
+    //Handle upddate button click
     override fun onUpdateButtonClicked(viewHolder: addItemAdapter.ViewHolder, position: Int) {
         val dialogBuilder = AlertDialog.Builder(requireContext())
         val inflater = this.layoutInflater
