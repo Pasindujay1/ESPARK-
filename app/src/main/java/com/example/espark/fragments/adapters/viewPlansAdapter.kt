@@ -36,7 +36,7 @@ class viewPlansAdapter(
 
 
     }
-    // inflates the view for the list item and returns a new ViewHolder object
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.view_plan,parent,false)

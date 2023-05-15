@@ -45,6 +45,7 @@ class addItemAdapter(
             .inflate(R.layout.view_item,parent,false)
         return ViewHolder(view)
     }
+    // binds the data of the Plan object at the given position to the views in the ViewHolder
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val addItem = additems[position].itemName + " (" +additems[position].placeUsing + ")"

@@ -101,6 +101,7 @@ class PlansFragment : Fragment(), OnDeletePlanClickListener, OnUpdatePlanClickLi
 
     }
 
+    // Called when the delete button is clicked
     override fun onDeleteButtonClicked(name: String) {
 
         val planRef = database.child(name)
