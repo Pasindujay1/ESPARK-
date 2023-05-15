@@ -34,10 +34,10 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
     lateinit var editTextPlanName: TextView//Declate txt view PLan name
     var additems = mutableListOf(
         AddItem("Bulb" , "Bedroom" ,10.0, "20" , "30",false)
-    )
-    lateinit var adapter : addItemAdapter
-    var planName : String ? = null
-    var amount :Double= 0.0
+    )//Add items List
+    lateinit var adapter : addItemAdapter//declare adapter
+    var planName : String ? = null//declare plana name
+    var amount :Double= 0.0// declare amount
 
 
 
@@ -49,7 +49,7 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
 
-        adapter = addItemAdapter(additems,this,this)
+        adapter = addItemAdapter(additems,this,this)//create adapter
 
         val view :View =  inflater.inflate(R.layout.fragment_add_item, container, false)
         val recyclerView: RecyclerView = view.findViewById(R.id.rvAddList)
@@ -61,22 +61,21 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
         val spinnerHours : Spinner = view.findViewById(R.id.select_hours)
         val selectMinutes : Spinner = view.findViewById(R.id.select_minutes)
         val selectWatt : Spinner = view.findViewById(R.id.selectWatt)
-
-
-//        val txtTime: EditText = view.findViewById(R.id.txtTime)
         val btn_add_item: Button = view.findViewById(R.id.btn_add_item)
         val btn_create_plan: Button = view.findViewById(R.id.btn_create_plan)
+
         txtAmount = view.findViewById(R.id.txtAmount)
         if(planName != null){
             editTextPlanName.setText(planName)
         }
 
-        var kwh = calcKiloWatt();
+        var kwh = calcKiloWatt();//call calc amount function
 
         txtAmount.text = calcAmount(kwh).toString()
         recyclerView.adapter = adapter
         recyclerView.layoutManager =  LinearLayoutManager(requireContext())
-        btn_add_item.setOnClickListener{
+
+        btn_add_item.setOnClickListener{//set listener for add item button
 
               val itemName = txtProductName.text.toString()
               val txtPlaceUsing = txtPlaceUsing.text.toString()
