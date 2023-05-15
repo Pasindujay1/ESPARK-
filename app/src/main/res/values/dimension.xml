@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="relative_header_padding">20dp</dimen>
+    <dimen name="img_width">40dp</dimen>
+    <dimen name="img_height">40dp</dimen>
+    <dimen name="step1_top_margin">16dp</dimen>
+    <dimen name="textIn_margin_start">16dp</dimen>
+    <dimen name="textIn_margin_top">24dp</dimen>
+    <dimen name="textIn_margin_end">16dp</dimen>
+    <dimen name="textIn_box_width">2dp</dimen>
+    <dimen name="step3_txt_margin">16dp</dimen>
+    <dimen name="upImg_txt_margin_start">8dp</dimen>
+    <dimen name="upImg_txt_margin_top">16dp</dimen>
+    <dimen name="upImg_txt_margin_end">272dp</dimen>
+    <dimen name="img_margin_start">16dp</dimen>
+    <dimen name="img_margin_top">16dp</dimen>
+    <dimen name="img_margin_end">16dp</dimen>
+
+    <dimen name="img_back_width">40dp</dimen>
+    <dimen name="img_back_height">40dp</dimen>
+    <dimen name="imgLay_product_height">230dp</dimen>
+    <dimen name="imgLay_product_padding">20dp</dimen>
+    <dimen name="img_pro_width">100dp</dimen>
+    <dimen name="img_pro_height">100dp</dimen>
+    <dimen name="txt_pro_marginL">10dp</dimen>
+    <dimen name="lay_card_pad">20dp</dimen>
+    <dimen name="lay_card_wid">0dp</dimen>
+    <dimen name="lay_card_height">120dp</dimen>
+    <dimen name="imgLay_pad">5</dimen>
+    <dimen name="imgV_wid">70dp</dimen>
+    <dimen name="imgV_height">70dp</dimen>
+
+</resources>
