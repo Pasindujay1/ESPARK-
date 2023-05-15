@@ -17,7 +17,7 @@ class viewPlansAdapter(
     private val onUpdateClickListener: OnUpdatePlanClickListener,// a listener for update button click events
 ): RecyclerView.Adapter<viewPlansAdapter.ViewHolder>() {
 
-
+    // ViewHolder class that holds the view references for each item in the list
     inner class ViewHolder(view: View):RecyclerView.ViewHolder(view){
         val txtViewPlanName:TextView
         val txtViewPrice:TextView
