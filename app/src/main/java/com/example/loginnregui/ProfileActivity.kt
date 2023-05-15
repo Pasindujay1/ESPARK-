@@ -67,6 +67,9 @@ class ProfileActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
+
+        // Get the profile information from the FirebaseDatabase instance
+
         databaseReference = database?.reference!!.child("profile")
 
         loadProfile()
