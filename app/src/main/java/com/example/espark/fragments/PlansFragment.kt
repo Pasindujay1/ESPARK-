@@ -27,12 +27,12 @@ import com.google.firebase.database.ValueEventListener
 
 class PlansFragment : Fragment(), OnDeletePlanClickListener, OnUpdatePlanClickListener {
 
-    lateinit var planList : MutableList<Plan>
+    lateinit var planList : MutableList<Plan>//delclare variables
 //    (
 //        Plan ("Plan 1" , "2500" )
 //    )
 
-    private lateinit var database : DatabaseReference
+    private lateinit var database : DatabaseReference//create database reference
     lateinit var adapter : viewPlansAdapter
     val addItems = mutableListOf<AddItem>()
 
