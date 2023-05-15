@@ -16,4 +16,11 @@
     <dimen name="view_bill_button_marginTop">50dp</dimen>
     <dimen name="add_bill_edtText_layout_marginStart">16dp</dimen>
     <dimen name="add_bill_edtText_layout_marginTop">16dp</dimen>
+
+    <dimen name="add_item_plan_name_margin_left">16dp</dimen>
+    <dimen name="add_item_Enter_plan_name_margin_Top">16dp</dimen>
+    <dimen name="add_item_recycler_margin_top">32dp</dimen>
+    <dimen name="add_item_recycler_padding_left">10dp</dimen>
+    <dimen name="add_item_recycler_padding_Top">10dp</dimen>
+    <dimen name="add_item_recycler_padding_Right">10dp</dimen>
 </resources>
