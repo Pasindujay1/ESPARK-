@@ -33,6 +33,7 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var tvupdate:TextView
 
 
+    // Initialize FirebaseAuth and FirebaseDatabase instances, and DatabaseReference variable
 
     private lateinit var firebaseAuth: FirebaseAuth
     var databaseReference: DatabaseReference? = null
