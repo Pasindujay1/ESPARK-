@@ -1,6 +1,6 @@
 package com.example.espark.fragments.adapters
 
-data class AddItem (
+data class AddItem (//Add item data class
     var itemName :String?,
     var placeUsing :String?,
     var watt : Double?,
