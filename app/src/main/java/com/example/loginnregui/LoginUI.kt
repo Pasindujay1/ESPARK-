@@ -64,6 +64,8 @@ class LoginUI : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
+        // If the user is already logged in, start the profile activity automatically
+
         if(firebaseAuth.currentUser !=null){
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
