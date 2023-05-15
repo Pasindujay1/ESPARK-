@@ -7,24 +7,19 @@ import org.jetbrains.annotations.TestOnly
 
 class BillcalculatorViewModel : ViewModel() {
 
-//    private var lastReading = 0
-//    private var currentReading = 0
-
-//    fun setInputValues(lastReadingInput: String, currentReadingInput: String) {
-//        lastReading = lastReadingInput.toInt()
-//        currentReading = currentReadingInput.toInt()
-//    }
-
+    //function for return consumed units
     fun powerUnits(lastReading: Int, currentReading: Int): Int {
         return currentReading - lastReading
     }
 
+    //function to calculate the electricity bill
     fun calculateSum(selectedOption: String, lastReading: Int, currentReading: Int): Double {
 
         var consumedUnits = currentReading - lastReading
         var fixedCharge = 0.00;
         var energyCharge = 0.00
 
+        //domestic type calculation
         if (selectedOption == "Domestic") {
             if (consumedUnits in 0..60) {
                 if (consumedUnits <= 30) {
@@ -50,6 +45,7 @@ class BillcalculatorViewModel : ViewModel() {
                 }
             }
 
+            //Religious and charitable institutions type calculation
         } else if (selectedOption == "Religious and charitable institutions") {
             if (consumedUnits in 0..30) {
                 fixedCharge = 400.00
@@ -72,6 +68,7 @@ class BillcalculatorViewModel : ViewModel() {
                 fixedCharge = 0.00
                 energyCharge = 0.00
             }
+            //industrial type calculation
         } else if (selectedOption == "Industrial") {
             if (consumedUnits in 0..300) {
                 fixedCharge = 1200.00

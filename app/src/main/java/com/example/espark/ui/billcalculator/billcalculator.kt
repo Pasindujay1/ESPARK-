@@ -24,10 +24,7 @@ class billcalculator : Fragment() {
         val calculateButton = rootView.findViewById<Button>(R.id.calBtn)
         calculateButton.setOnClickListener {
 
-//            val spinner = rootView.findViewById<Spinner>(R.id.cusType)
-//            val adapter = ArrayAdapter.createFromResource(requireContext(), R.array.customer_type, android.R.layout.simple_spinner_item)
-//            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-//            spinner.adapter = adapter
+            //get the user entered values
             val editText1 = rootView.findViewById<EditText>(R.id.calEdtText1)
             val editText2 = rootView.findViewById<EditText>(R.id.calEdtText2)
             val spinnerBillType = rootView.findViewById<Spinner>(R.id.cusType)
@@ -36,10 +33,11 @@ class billcalculator : Fragment() {
             val currentReading = editText2.text.toString().toInt()
             val selectedOption = spinnerBillType.selectedItem.toString()
 
-//            viewModel.setInputValues(value1, value2)
-
+            //calling functions
             val totAmount = viewModel.calculateSum(selectedOption,lastReading,currentReading)
             val powerUnits = viewModel.powerUnits(lastReading,currentReading)
+
+            //display the output based on the calculations
             if(totAmount > 0.00) {
                 val alertDialog = AlertDialog.Builder(requireContext())
                     .setTitle("Electricity Bill Calculation")
