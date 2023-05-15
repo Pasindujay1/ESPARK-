@@ -11,11 +11,14 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
+// Define a class for the PastBills activity that extends the AppCompatActivity class
 class PastBills : AppCompatActivity() {
 
+    // Declare variables
     private lateinit var listView: ListView
     private lateinit var database: FirebaseDatabase
 
+    // Define what happens when the activity is created
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_past_bills)
@@ -25,7 +28,9 @@ class PastBills : AppCompatActivity() {
         listView = findViewById(R.id.list_view_bills)
         database = FirebaseDatabase.getInstance()
 
+        // Get a reference to the "Bills" node in the Firebase database
         val billsRef = database.reference.child("Bills")
+        // Add a listener to the "Bills" node in the Firebase database
         billsRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val bills = mutableListOf<BillData>()
