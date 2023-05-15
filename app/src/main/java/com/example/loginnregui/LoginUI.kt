@@ -30,6 +30,8 @@ class LoginUI : AppCompatActivity() {
 
         // Redirect user to the registration activity when they click the "new user" button
 
+        // When the user clicks the login button, try to sign in with the entered email and password
+
         binding.Loginbtn.setOnClickListener{
             val email = binding.regEmail.text.toString()
             val pass = binding.regPassword.text.toString()
