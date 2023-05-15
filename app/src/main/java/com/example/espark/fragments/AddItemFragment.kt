@@ -29,9 +29,9 @@ import java.text.DecimalFormat
 
 class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener {
 
-    private lateinit var database : DatabaseReference
-    lateinit var txtAmount: TextView
-    lateinit var editTextPlanName: TextView
+    private lateinit var database : DatabaseReference //Create database reference
+    lateinit var txtAmount: TextView//Declare txt amount
+    lateinit var editTextPlanName: TextView//Declate txt view PLan name
     var additems = mutableListOf(
         AddItem("Bulb" , "Bedroom" ,10.0, "20" , "30",false)
     )
