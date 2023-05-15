@@ -77,7 +77,6 @@
     <string name="delete_icon">Delete</string>
     <string name="edit_icon">Edit</string>
     <string name="bills">Bills</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="update_bill_btn">Update</string>
 

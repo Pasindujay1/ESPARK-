@@ -66,6 +66,7 @@ class BillAdapter(context: Context, bills: List<BillData>) : ArrayAdapter<BillDa
         }
 
 
+        //navigate to Update bills activity when click on edit icon
         holder.editIcon?.setOnClickListener {
             val bill = billsList[position]
             val intent = Intent(context, UpdateBills::class.java)
