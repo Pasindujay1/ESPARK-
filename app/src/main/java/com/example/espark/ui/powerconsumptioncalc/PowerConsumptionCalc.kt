@@ -1,46 +1,41 @@
 package com.example.espark.ui.powerconsumptioncalc
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import com.example.espark.R
-import com.example.espark.databinding.FragmentBillcalculatorBinding
-import com.example.espark.databinding.FragmentPowerConsumptionCalcBinding
-import com.example.espark.ui.billcalculator.BillcalculatorViewModel
+//import com.example.espark.fragments.adapters.VPAdapter
+//import com.example.espark.fragments.AddItemFragment
+//import com.example.espark.fragments.PlansFragment
+import androidx.viewpager.widget.ViewPager
+
+import com.google.android.material.tabs.TabLayout
 
 class PowerConsumptionCalc : Fragment() {
-
-    private var _binding: FragmentPowerConsumptionCalcBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        val powerConsumptionCalcViewModel =
-            ViewModelProvider(this).get(PowerConsumptionCalcViewModel::class.java)
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_power_consumption_calc, container, false)
 
-        _binding = FragmentPowerConsumptionCalcBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.powerCalculator
-        powerConsumptionCalcViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+//        val adapter = VPAdapter(childFragmentManager)
+//        adapter.addFragment(AddItemFragment(),"Add Item")
+//        adapter.addFragment(PlansFragment(),"Plans")
+//        val viewPager = view.findViewById<ViewPager>(R.id.viewPager)
+//        val tabLayout = view.findViewById<TabLayout>(R.id.tab_Layout)
+//
+//        viewPager.adapter  = adapter
+//        tabLayout.setupWithViewPager(viewPager)
+//        tabLayout.getTabAt(0)!!.setIcon(R.drawable.ic_baseline_add_24)
+//        tabLayout.getTabAt(1)!!.setIcon(R.drawable.ic_baseline_next_plan_24)
+        return view
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
 
 }
+
+
