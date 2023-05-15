@@ -86,6 +86,7 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
 
               var watt :Double
 
+              //validate inputs
             if(itemName==""){
                 Toast.makeText(context,"Enter a item name" ,Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -128,7 +129,7 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
             txtAmount.text = calcAmount(kwh).toString()
 
         }
-        btn_create_plan.setOnClickListener{
+        btn_create_plan.setOnClickListener{//set onclick listener for for create plans button
 
 
             database = FirebaseDatabase.getInstance().getReference("Plans")
