@@ -217,6 +217,7 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
 
 
     }
+    //calculate Bill amount
     fun calcAmount(kwh :Double) : Double{
 
         var amountcal :Double = 0.0
@@ -242,7 +243,7 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
 
     }
 
-    //calculate bill amount
+    //calculate kilo watt
     fun calcKiloWatt():Double{
         var kwh :Double = 0.0;
         for (i in 0 until additems.size) {
