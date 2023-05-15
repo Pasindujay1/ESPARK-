@@ -9,6 +9,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class LoginUI : AppCompatActivity() {
 
+    // Declare binding and firebaseAuth as private lateinit variables
     private lateinit var binding: ActivityLoginBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
