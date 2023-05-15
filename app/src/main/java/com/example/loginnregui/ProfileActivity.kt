@@ -115,6 +115,8 @@ class ProfileActivity : AppCompatActivity() {
 
         userreference?.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
+                    // Display the user's firstname in the firstname TextView
+
                     tvFirstName.text = "Firstname -   " +snapshot.child("firstnameInput").value.toString()
                     tvLastName.text = "Lastname -   " +snapshot.child("lastnameInput").value.toString()
                     tvEmail.text ="Email -  " + snapshot.child("reg_email").value.toString() //20.43min
