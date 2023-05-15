@@ -25,10 +25,11 @@ class viewPlansAdapter(
         val btnUpdate: ImageView
 
         init {
-            txtViewPlanName = view.findViewById(R.id.txtViewItemView)
-            txtViewPrice = view.findViewById(R.id.txtViewItemWatt)
-            btnDelete = view.findViewById(R.id.btnDelete)
-            btnUpdate = view.findViewById(R.id.btnUpdate)
+            txtViewPlanName = view.findViewById(R.id.txtViewItemView)// TextView for plan name
+            txtViewPrice = view.findViewById(R.id.txtViewItemWatt)// TextView for plan price
+            btnDelete = view.findViewById(R.id.btnDelete)// ImageView for delete button
+            btnUpdate = view.findViewById(R.id.btnUpdate)// ImageView for update button
+
 
         }
 
