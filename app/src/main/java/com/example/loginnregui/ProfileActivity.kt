@@ -118,6 +118,8 @@ class ProfileActivity : AppCompatActivity() {
                     // Display the user's firstname in the firstname TextView
 
                     tvFirstName.text = "Firstname -   " +snapshot.child("firstnameInput").value.toString()
+                    // Display the user's lastname in the lastname TextView
+
                     tvLastName.text = "Lastname -   " +snapshot.child("lastnameInput").value.toString()
                     tvEmail.text ="Email -  " + snapshot.child("reg_email").value.toString() //20.43min
 
