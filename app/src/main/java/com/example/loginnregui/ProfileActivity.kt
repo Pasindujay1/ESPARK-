@@ -105,7 +105,9 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun loadProfile(){
             val user = firebaseAuth.currentUser
-            val userreference = databaseReference?.child(user?.uid!!)
+        // Get the user's information from the FirebaseDatabase instance
+
+        val userreference = databaseReference?.child(user?.uid!!)
 
             tvEmail.text = "Email  -- > "+user?.email
 
