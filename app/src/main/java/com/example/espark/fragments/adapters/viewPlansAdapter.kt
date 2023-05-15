@@ -36,23 +36,24 @@ class viewPlansAdapter(
 
 
     }
-
+    // inflates the view for the list item and returns a new ViewHolder object
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.view_plan,parent,false)
         return ViewHolder(view)
     }
+    // binds the data of the Plan object at the given position to the views in the ViewHolder
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
           holder.txtViewPlanName.text = planItems[position].planName//set plan name
-          holder.txtViewPrice.text = planItems[position].amount
+          holder.txtViewPrice.text = planItems[position].amount // set plan price
           val name = planItems[position].planName
           holder.btnDelete.setOnClickListener{
               if (name != null) {
-                  onDeleteClickListener.onDeleteButtonClicked(name)
+                  onDeleteClickListener.onDeleteButtonClicked(name)// handle delete button click event
               }
           }
           holder.btnUpdate.setOnClickListener{
-              onUpdateClickListener.onUpdateButtonClicked(holder , position)
+              onUpdateClickListener.onUpdateButtonClicked(holder , position)// handle delete button click event
           }
 
 
