@@ -76,6 +76,8 @@ class ProfileActivity : AppCompatActivity() {
 
         loadProfile()
 
+        // Set a click listener to the delete button
+
         binding.deletebtn.setOnClickListener{
             val user = firebaseAuth.currentUser
             user?.delete()?.addOnCompleteListener{
