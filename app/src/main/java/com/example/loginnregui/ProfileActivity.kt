@@ -63,6 +63,7 @@ class ProfileActivity : AppCompatActivity() {
 
 
 
+        // Initialize FirebaseAuth and FirebaseDatabase instances
 
         firebaseAuth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
