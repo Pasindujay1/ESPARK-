@@ -111,7 +111,9 @@ class ProfileActivity : AppCompatActivity() {
 
             tvEmail.text = "Email  -- > "+user?.email
 
-            userreference?.addValueEventListener(object : ValueEventListener {
+        // Retrieve the user's information from the FirebaseDatabase instance
+
+        userreference?.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     tvFirstName.text = "Firstname -   " +snapshot.child("firstnameInput").value.toString()
                     tvLastName.text = "Lastname -   " +snapshot.child("lastnameInput").value.toString()
