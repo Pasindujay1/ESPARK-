@@ -24,6 +24,8 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
 
+    // Initialize the TextViews for firstname, lastname, email, logout, and update button
+
     private lateinit var tvFirstName: TextView
     private lateinit var tvLastName: TextView
     private lateinit var tvEmail: TextView
