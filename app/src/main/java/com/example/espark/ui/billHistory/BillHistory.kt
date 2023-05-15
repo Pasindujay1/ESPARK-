@@ -18,8 +18,6 @@ class BillHistory : Fragment() {
 
     private var _binding: FragmentBillHistoryBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -33,13 +31,8 @@ class BillHistory : Fragment() {
         _binding = FragmentBillHistoryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textBillHistory
-//        billHistoryViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
         return root
     }
-
 
 
     override fun onDestroyView() {
@@ -50,21 +43,20 @@ class BillHistory : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // ...
-
+        //open AddBillActivity when clicked on the add bill button
         val buttonAddBill: Button = view.findViewById(R.id.btnAddBill)
         buttonAddBill.setOnClickListener {
             val intent = Intent(requireContext(), AddBillActivity::class.java)
             startActivity(intent)
         }
 
+        //open PastBills activity when clicked on the past bills button
         val buttonViewBills: Button = view.findViewById(R.id.btnPastBills)
         buttonViewBills.setOnClickListener {
             val intent = Intent(requireContext(), PastBills::class.java)
             startActivity(intent)
         }
 
-        // ...
     }
 
 
