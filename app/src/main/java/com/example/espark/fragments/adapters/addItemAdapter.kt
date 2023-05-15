@@ -52,14 +52,14 @@ class addItemAdapter(
         holder.txtViewItemWatt.text = additems[position].watt?.toInt().toString()+"W"
         holder.textViewTime.text = additems[position].time + "h"
         holder.textViewMinutes.text = additems[position].minutes + "m"//set values to views
-        holder.btnDelete.setOnClickListener{
+        holder.btnDelete.setOnClickListener{//set onclick listener for delete button
             onDeleteClickListener.onDeleteButtonClicked(position)
         }
-        holder.btnUpdate.setOnClickListener{
+        holder.btnUpdate.setOnClickListener{//set onclick listener for update button
             onUpdateClickListener.onUpdateButtonClicked(holder , position)
         }
     }
-    override fun getItemCount(): Int {
+    override fun getItemCount(): Int {//count items
         return additems.size
     }
 

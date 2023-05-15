@@ -156,6 +156,7 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
 
             database.child(planName).setValue(planMap).addOnSuccessListener {//save in the plan table in the database
                 additems.clear()//clear add items list
+
                 adapter.notifyDataSetChanged()//refresh adapter
                 Toast.makeText(context,"Successfully Added" ,Toast.LENGTH_SHORT).show()//show success message
             }.addOnFailureListener{
