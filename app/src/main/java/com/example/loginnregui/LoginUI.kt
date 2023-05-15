@@ -24,6 +24,8 @@ class LoginUI : AppCompatActivity() {
             startActivity(intent)
         }
 
+        // Initialize firebaseAuth instance
+
         firebaseAuth = FirebaseAuth.getInstance()
 
         // Redirect user to the registration activity when they click the "new user" button
