@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener
 
 
 class PlansFragment : Fragment(), OnDeletePlanClickListener, OnUpdatePlanClickListener {
-
+    // Declare variables
     lateinit var planList : MutableList<Plan>//delclare variables
 //    (
 //        Plan ("Plan 1" , "2500" )
@@ -41,6 +41,8 @@ class PlansFragment : Fragment(), OnDeletePlanClickListener, OnUpdatePlanClickLi
         // Inflate the layout for this fragment
         planList = mutableListOf()
         database = FirebaseDatabase.getInstance().getReference("Plans")
+
+        // Read from the database
         database.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 planList.clear()
@@ -89,6 +91,7 @@ class PlansFragment : Fragment(), OnDeletePlanClickListener, OnUpdatePlanClickLi
 
 
 
+    // Called when the update button is clicked
     override fun onUpdateButtonClicked(viewHolder: viewPlansAdapter.ViewHolder, position: Int) {
         val plan = planList[position]
         val intent = Intent(context, UpdatePlans::class.java)
