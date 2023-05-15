@@ -26,6 +26,8 @@ class LoginUI : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+        // Redirect user to the registration activity when they click the "new user" button
+
         binding.Loginbtn.setOnClickListener{
             val email = binding.regEmail.text.toString()
             val pass = binding.regPassword.text.toString()
