@@ -41,6 +41,8 @@ class LoginUI : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(email , pass).addOnCompleteListener{
                     if(it.isSuccessful){
 
+                        // If sign in is successful, start the profile activity
+
                         //to send the user to sign-In/Login activity
                         val intent = Intent(this, ProfileActivity::class.java)
                         startActivity(intent)
