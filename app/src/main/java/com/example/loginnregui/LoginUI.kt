@@ -53,6 +53,8 @@ class LoginUI : AppCompatActivity() {
                 }
 
             }else{
+                // If the email and/or password field is empty, display an error message as a toast
+
                 Toast.makeText(this,"Empty fields are not allowed", Toast.LENGTH_SHORT).show()
 
             }
