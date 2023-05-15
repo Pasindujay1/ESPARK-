@@ -35,6 +35,7 @@ class UpdateBills : AppCompatActivity() {
         val billsRef = database.reference.child("Bills").child(billId)
         billsRef.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
+
                 // Get the bill data from the snapshot and update the UI
                 val year = snapshot.child("billYear").value.toString()
                 val month = snapshot.child("billMonth").value.toString()

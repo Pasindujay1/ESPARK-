@@ -94,5 +94,30 @@
     <string name="update_bill_btn">Update</string>
     <string name="update_bill_title">Update Bill</string>
 
+    //table page
+    <string name="th1r1">Consumption(kWh)</string>
+    <string name="th1r2">Fixed charge(Rs.)</string>
+    <string name="th1r3">Unit charge(Rs. /kWh</string>
+
+    <string name="td1r1">Consumption 0-60 kWh per month</string>
+    <string name="td2r1">0-30</string>
+    <string name="td2r2">400.00</string>
+    <string name="td2r3">30.00</string>
+    <string name="td3r1">31-60</string>
+    <string name="td3r2">550.00</string>
+    <string name="td3r3">37.00</string>
+    <string name="td4r1">Consumption above 60 kWh per month</string>
+    <string name="td5r1">0-90</string>
+    <string name="td5r2">650.00</string>
+    <string name="td5r3">42.00</string>
+    <string name="td6r1">91-180</string>
+    <string name="td6r2">1500.00</string>
+    <string name="td6r3">50.00</string>
+    <string name="td7r1">181 and above</string>
+    <string name="td7r2">2000.00</string>
+    <string name="td7r3">75.00</string>
+
+    <string name="charges_table_title">Charges structure</string>
+    <string name="domestic_label">Type : Domestic</string>
 
 </resources>

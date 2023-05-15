@@ -4,19 +4,363 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:background="@color/sixty_color">
 
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/chargeTbleTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="60dp"
+        android:background="@color/thirty_color"
+        android:fontFamily="@font/poppins_regular"
+        android:paddingTop="10dp"
+        android:text="@string/charges_table_title"
         android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/ten_color"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/domestic_label"
+        android:textColor="@color/ten_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TableLayout
+        android:id="@+id/table1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/ten_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/th1"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_weight="4"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:padding="10sp"
+                android:text="@string/th1r1"
+                android:textColor="@color/ten_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/th2"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10sp"
+                android:text="@string/th1r2"
+                android:textColor="@color/ten_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/th3"
+                android:layout_width="0dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10sp"
+                android:text="@string/th1r3"
+                android:textColor="@color/ten_color"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/td1r1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="10"
+                android:background="@color/sixty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td1r1"
+                android:textColor="@color/ten_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/td2r1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="4"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td2r1"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/td2r2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td2r2"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/td2r3"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td2r3"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/td3r1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="4"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td3r1"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/td3r2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td3r2"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/td3r3"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td3r3"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/td4r1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="10"
+                android:background="@color/sixty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td4r1"
+                android:textColor="@color/ten_color"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/td5r1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="4"
+                android:background="@color/thirty_color"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td5r1"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/td5r2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td5r2"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/td5r3"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td5r3"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/td6r1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="4"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td6r1"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/td6r2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td6r2"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/td6r3"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td6r3"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/td7r1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="4"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td7r1"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/td7r2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td7r2"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/td7r3"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="3"
+                android:background="@color/thirty_color"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_horizontal"
+                android:padding="10sp"
+                android:text="@string/td7r3"
+                android:textColor="@color/ten_color"
+                android:textSize="14sp" />
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chargeTbleTitle"
+        app:srcCompat="@drawable/logo" />
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imageView3"-->
+    <!--        android:layout_width="45dp"-->
+    <!--        android:layout_height="37dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:srcCompat="@drawable/arrow_back" -->
+    <!--        />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
