@@ -50,6 +50,11 @@ class ExampleUnitTest {
     }
 
     @Test
+    fun religiousBillCalc_isIncorrect2(){
+        assertNotEquals(55250.00, billCalViewModel.calculateSum("Religious and charitable institutions",30569, 23692), 0.0)
+    }
+
+    @Test
     fun billCalc_isIncorrectType(){
         assertEquals(0.0, billCalViewModel.calculateSum("Something", 25000,26000),0.0)
     }
