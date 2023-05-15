@@ -138,7 +138,7 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
                 Toast.makeText(context,"Enter a Plan name" ,Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            val plan = Plan(planName,amount.toString(),additems)
+            val plan = Plan(planName,amount.toString(),additems)//create a plan
             val planMap = mapOf(
                 "planName" to plan.planName,
                 "amount" to plan.amount,
