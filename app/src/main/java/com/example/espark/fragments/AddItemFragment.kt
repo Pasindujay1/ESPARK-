@@ -132,7 +132,7 @@ class AddItemFragment : Fragment(), OnDeleteClickListener, OnUpdateClickListener
         btn_create_plan.setOnClickListener{//set onclick listener for for create plans button
 
 
-            database = FirebaseDatabase.getInstance().getReference("Plans")
+            database = FirebaseDatabase.getInstance().getReference("Plans")//get database reference
             val planName = editTextPlanName.text.toString()
             if(planName==""){
                 Toast.makeText(context,"Enter a Plan name" ,Toast.LENGTH_SHORT).show()
