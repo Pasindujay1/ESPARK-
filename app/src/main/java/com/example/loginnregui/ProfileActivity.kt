@@ -72,6 +72,8 @@ class ProfileActivity : AppCompatActivity() {
 
         databaseReference = database?.reference!!.child("profile")
 
+        // Call the function to load the user profile information
+
         loadProfile()
 
         binding.deletebtn.setOnClickListener{
