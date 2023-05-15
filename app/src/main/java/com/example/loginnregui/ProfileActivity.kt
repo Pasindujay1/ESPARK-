@@ -82,6 +82,8 @@ class ProfileActivity : AppCompatActivity() {
             // Get the current user instance
 
             val user = firebaseAuth.currentUser
+            // Delete the user account and associated data from FirebaseAuth and FirebaseDatabase
+
             user?.delete()?.addOnCompleteListener{
                 if(it.isSuccessful){
                     //account already deleted
