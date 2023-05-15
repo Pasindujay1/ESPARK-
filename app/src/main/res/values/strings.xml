@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">LoginNregUi</string>
+    <string name="email">Email</string>
+    <string name="txtEmailAddress">textEmailAddress</string>
+    <string name="pwd">Password</string>
+    <string name="choicetxtor">Or\nLogin From</string>
+    <string name="choicetxtor2">Or\nRegister From</string>
+    <string name="loginbtn">LOGIN</string>
+    <string name="forgotpwd">Forgot Password ?</string>
+    <string name="registerbtn">Register</string>
+    <string name="confirmpwd">Confirm Password</string>
+    <string name="signin">Already have an account? Sign In</string>
+    <string name="newuserreg">New User? Register Now</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="logout_btn">Logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update_fname">Update First Name</string>
+    <string name="update_lastname">Update Last Name</string>
+    <string name="update_btn">Update</string>
+    <string name="update_dataa">Update</string>
+    <string name="delette_btn">Delete</string>
+</resources>

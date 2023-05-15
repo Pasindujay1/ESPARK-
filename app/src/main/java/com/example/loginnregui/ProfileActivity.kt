@@ -1,0 +1,119 @@
+package com.example.loginnregui
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.provider.ContactsContract
+import android.util.Log
+import android.widget.TextView
+import android.widget.Toast
+import com.example.loginnregui.databinding.ActivityMainBinding
+import com.example.loginnregui.databinding.ActivityRegistrationUiBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+
+
+import com.google.firebase.database.*
+
+
+class ProfileActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
+
+    private lateinit var tvFirstName: TextView
+    private lateinit var tvLastName: TextView
+    private lateinit var tvEmail: TextView
+    private lateinit var tvLogOut:TextView
+    private lateinit var tvupdate:TextView
+
+
+
+    private lateinit var firebaseAuth: FirebaseAuth
+    var databaseReference: DatabaseReference? = null
+    var database : FirebaseDatabase? = null
+
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+
+        tvFirstName = findViewById(R.id.firstnameText)
+        tvLastName = findViewById(R.id.lastnameText)
+        tvEmail = findViewById(R.id.emailText)
+
+        // Initialize tvLogOut
+        tvLogOut = findViewById(R.id.logoutButton)
+        tvupdate = findViewById(R.id.update2btn)
+
+
+
+
+        firebaseAuth = FirebaseAuth.getInstance()
+        database = FirebaseDatabase.getInstance()
+        databaseReference = database?.reference!!.child("profile")
+
+        loadProfile()
+
+        binding.deletebtn.setOnClickListener{
+            val user = firebaseAuth.currentUser
+            user?.delete()?.addOnCompleteListener{
+                if(it.isSuccessful){
+                    //account already deleted
+                    Toast.makeText(this,"Account Successfully deleted",Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this@ProfileActivity, LoginUI::class.java))
+                    finish()
+
+                }else{
+                    //catch error
+                    Log.e("error", it.exception.toString())
+                }
+            }
+        }
+    }
+
+
+
+        private fun loadProfile(){
+            val user = firebaseAuth.currentUser
+            val userreference = databaseReference?.child(user?.uid!!)
+
+            tvEmail.text = "Email  -- > "+user?.email
+
+            userreference?.addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    tvFirstName.text = "Firstname -   " +snapshot.child("firstnameInput").value.toString()
+                    tvLastName.text = "Lastname -   " +snapshot.child("lastnameInput").value.toString()
+                    tvEmail.text ="Email -  " + snapshot.child("reg_email").value.toString() //20.43min
+
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+
+            })
+
+            tvupdate.setOnClickListener {
+                startActivity(Intent(this@ProfileActivity, UpdataData::class.java))
+
+            }
+
+            tvLogOut.setOnClickListener {
+                firebaseAuth.signOut()
+                startActivity(Intent(this@ProfileActivity, LoginUI::class.java))
+                finish()
+            }
+
+
+        }
+    }
