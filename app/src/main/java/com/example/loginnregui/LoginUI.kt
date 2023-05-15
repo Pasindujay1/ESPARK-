@@ -18,7 +18,7 @@ class LoginUI : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        // Inflate the layout for the activity using view binding
         binding.newuserredirect.setOnClickListener{
             val intent = Intent(this, RegistrationUI::class.java)
             startActivity(intent)
